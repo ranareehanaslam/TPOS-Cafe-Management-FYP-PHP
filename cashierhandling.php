@@ -29,18 +29,12 @@ function show_products($fetchData){
         $sn=1;
         foreach($fetchData as $data){
             $stock=$data['stock'];
-            if($stock==0||$data['status']=="not-available")
-            {
-
-            }
-            else
-            {
+            if (!($stock==0||$data['status']=="not-available")) {
                 if($count==0)
                 {
                     echo " <div class='row'>";
                 }
                 $count++;
-
                 echo "
                             <div class='col-sm-3 col-6 m-auto' style='padding-top: 10px;padding-bottom: 10px;'>
                                 <div class='card'>
@@ -49,14 +43,15 @@ function show_products($fetchData){
                                     </div>
                                     <button class='productsshow' data-bs-toggle='modal' data-bs-target='#itemadd' data-itemid='".$data['id']."' data-price='".$data['price']."'>
                                         <img class='card-img-top' src='".$data['image']."' alt='Product Image' height='120' width='136'>
-                                        "; if($stock==-1)
+                                        ";
+                if($stock==-1)
             {
                 echo "STOCK <span>&#8734;</span> ";
             }
             else{
                 echo "STOCK:$stock";
             }
-                                            echo "
+                echo "
                                     </button>
                                     <div class='card-footer bg-dark text-center'>
                                         PKR ".$data['price']."

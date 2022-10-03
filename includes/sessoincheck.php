@@ -7,10 +7,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION[
         }
 
 }
-elseif (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION["role"] == "Admin") {
-
-}
-else {
+elseif (!(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION["role"] == "Admin")) {
     header("location: login.php");
 }
 
