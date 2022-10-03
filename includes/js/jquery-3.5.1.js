@@ -2063,7 +2063,7 @@
                         // But maintain support for old signatures
                         if ( fn.length > 1 ) {
                             args = [ pseudo, pseudo, "", argument ];
-                            return Expr.setFilters.hasOwnProperty( pseudo.toLowerCase() ) ?
+                            return Object.prototype.hasOwnProperty.call(Expr.setFilters, pseudo.toLowerCase()) ?
                                 markFunction( function( seed, matches ) {
                                     var idx,
                                         matched = fn( seed, argument ),
