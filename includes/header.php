@@ -33,13 +33,10 @@ $shopname=mysqli_fetch_row(mysqli_query($connection,"SELECT * FROM `tblsetting` 
             </a>
             <?php
             if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION["role"] == "Admin") {
-                echo '<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">';
-                echo '<span class="navbar-toggler-icon"></span>';
-                echo '</button>';
-
-            } elseif (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION["role"] == "Cashier") {
-
-            }
+    echo '<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">';
+    echo '<span class="navbar-toggler-icon"></span>';
+    echo '</button>';
+}
             ?>
 
 
