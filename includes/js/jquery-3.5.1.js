@@ -730,7 +730,7 @@
                 // Support: Android<4.0
                 // Detect silently failing push.apply
                 // eslint-disable-next-line no-unused-expressions
-                arr[ preferredDoc.childNodes.length ].nodeType;
+                
             } catch ( e ) {
                 push = { apply: arr.length ?
 
@@ -2194,7 +2194,7 @@
                         // options in Safari work properly
                         if ( elem.parentNode ) {
                             // eslint-disable-next-line no-unused-expressions
-                            elem.parentNode.selectedIndex;
+                            
                         }
 
                         return elem.selected === true;
@@ -8205,7 +8205,7 @@
 
                 var parent = elem.parentNode;
                 if ( parent && parent.parentNode ) {
-                    parent.parentNode.selectedIndex;
+                    
                 }
                 return null;
             },
@@ -8215,10 +8215,10 @@
 
                 var parent = elem.parentNode;
                 if ( parent ) {
-                    parent.selectedIndex;
+                    
 
                     if ( parent.parentNode ) {
-                        parent.parentNode.selectedIndex;
+                        
                     }
                 }
             }
