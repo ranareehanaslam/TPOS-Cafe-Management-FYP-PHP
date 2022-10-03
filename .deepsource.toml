@@ -4,5 +4,10 @@ version = 1
 name = "php"
 enabled = true
 
-  [analyzers.meta]
-  bootstrap_files = ["aa"]
+[[analyzers]]
+name = "javascript"
+enabled = true
+
+[[analyzers]]
+name = "sql"
+enabled = true
